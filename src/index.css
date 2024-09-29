@@ -1,13 +1,222 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --red: #ff0055;
+
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px;
+}
+/* Page Main  */
+
+.main-info {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+    margin-bottom: 51px;
+    position: relative;
+    z-index: 1;
+    padding-top: 60px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main-info__wrap {
+    display: flex;
+    gap: 50px;
+    line-height: 1.4;
+    height: 500px;
+}
+
+.main-info__text-left {
+    align-self: end;
+}
+
+.main-info__title-left {
+    font-size: 43px;
+    font-weight: 900;
+    color: var(--basic-white);
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    max-width: 600px;
+}
+
+.main-info__text {
+    font-size: 24px;
+    color: var(--basic-white);
+    line-height: 1.4;
+}
+
+.main-info__title-right {
+    max-width: 357px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--basic-white);
+}
+
+/* Services */
+
+.services__bg {
+    height: 100vh;
+}
+
+.services__wrap-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.services__wrap {
+    position: relative;
+}
+
+.services__wrap:last-child {
+    margin-bottom: 100px;
+}
+
+.services__wrap-bg {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 150px;
+    position: relative;
+}
+
+.services__wrap-bg::before {
+    content: '';
+    position: absolute;
+    top: 220px;
+    bottom: -25px;
+    right: 196px;
+    left: 314px;
+    background-color: #f4f7fa;
+    z-index: -50;
+}
+
+@media (max-width: 1440px) {
+    .services__wrap-bg::before {
+        right: 95px;
+        left: 220px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .services__wrap-bg::before {
+        top: 220px;
+        bottom: -22px;
+        right: 668px;
+        left: 749px;
+    }
+}
+
+.services__wrap-bg__pmc::before {
+    content: '';
+    position: absolute;
+    top: 220px;
+    bottom: -20px;
+    right: 368px;
+    left: 150px;
+    background-color: #f4f7fa;
+    z-index: -50;
+}
+
+@media (max-width: 1440px) {
+    .services__wrap-bg__pmc::before {
+        left: 50px;
+        right: 282px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .services__wrap-bg__pmc::before {
+        top: 220px;
+        bottom: -22px;
+        right: 788px;
+        left: 600px;
+    }
+}
+
+.services__info {
+    gap: 26px;
+    padding-top: 110px;
+}
+
+.services__info__top {
+    gap: 200px;
+    padding-top: 0px;
+}
+
+.services__info__pmc {
+    gap: 16px;
+}
+
+.engineering-services {
+    padding-bottom: 40px;
+}
+
+.services__description,
+.services__info {
+    width: 600px;
+    color: var(--basic-black);
+}
+
+.services__title-description {
+    font-size: 66px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.services__span {
+    color: #ff7c00;
+}
+
+.services__title {
+    font-size: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    letter-spacing: 10px;
+}
+
+.services__text {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.2;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+.services__item {
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.7;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.services__item::before {
+    content: '';
+    background-image: url('../src/components/img/icon-arrow.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: -12px;
+}
+
+.services__item:not(:last-child) {
+    padding-bottom: 10px;
+}
+
+.progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: var(--red);
+    transform-origin: 0%;
+    z-index: 100000;
 }
